@@ -79,7 +79,7 @@ function App() {
   };
 
   const fetchMessages = async () => {
-    const response = await fetch("http://localhost:3000/messages.json");
+    const response = await fetch("https://ruby-on-rails-chat-api.onrender.com/messages.json");
     const data: Message[] = await response.json();
     setMessages(data.filter(dt => dt.body !== null));
     scrollChat();
@@ -116,7 +116,7 @@ function App() {
       //check if message is an image URL
       checkAndSaveImage(body);
 
-      await fetch("http://localhost:3000/messages.json", {
+      await fetch("https://ruby-on-rails-chat-api.onrender.com/messages.json", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -127,7 +127,7 @@ function App() {
   };
 
   const sendImage = async (url: string) => {
-    await fetch("http://localhost:3000/messages.json", {
+    await fetch("https://ruby-on-rails-chat-api.onrender.com/messages.json", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

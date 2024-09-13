@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import sendIcon from '/send.svg'
 import './App.css'
 
-const ws = new WebSocket("ws://localhost:3000/cable");
+const ws = new WebSocket("ws://ruby-on-rails-chat-api.onrender.com/cable");
 
 interface Message {
   id: number;
